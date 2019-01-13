@@ -1,5 +1,7 @@
 package semana6;
 
+import java.util.Calendar;
+
 /**
 *	Navegue pelo site da Cognizant(ou por algum da sua escolhe ) e a cada troca de pagina ou preenchimento de dados
  * tire uma foto e grave ela com o nome "Nome da pagina + Hora da foto"
@@ -16,7 +18,30 @@ package semana6;
  */
 
 public class Evidencia {
-	public static void main(String[] args) {
+	public static void ScreenShot () {
+		   File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		   
+		   try {
+		       FileUtils.copyFile(scrFile, new File(GetDesktopPath() + GetDateString()));
+		   } catch (IOException e) {
+		       e.printStackTrace();
+		   }
+		}
+	
+	public static String GetDesktopPath () {
+		
+		FileSystemView.getFileSystemView().getHomeDirectory();
+		
+		return home.getAbsolutePath();
 		
 	}
+	
+	public static String GetDateString () {
+		
+		 Calendar c = Calendar.getInstance();
+		 return c.getTime().toString();
+		
+	}
+		
+		
 }
