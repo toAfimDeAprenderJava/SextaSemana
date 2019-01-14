@@ -4,8 +4,6 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 public class SeleniumWebDriver extends TimeSheet {
 

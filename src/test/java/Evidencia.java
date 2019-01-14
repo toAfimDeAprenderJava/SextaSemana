@@ -2,12 +2,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
@@ -28,9 +23,7 @@ import java.text.SimpleDateFormat;
 
 public class Evidencia {
 
-		/*Robot robot = new Robot();
-		BufferedImage image = robot.createScreenCapture(screenRectangle);
-		ImageIO.write(image,"png", file);*/
+
 		public static String dataHoraArquivo(){
 			Timestamp ts = new Timestamp(System.currentTimeMillis());
 			return new SimpleDateFormat("yyyyMMddhhmmss").format(ts);
